@@ -1,0 +1,11 @@
+<header class="block hcontrast">
+	<div class="wrap">
+		<h1>{{ site.title }} </h1>
+		<p>{{ site.description }}</p>
+		<div class="socials">
+			{% for social in site.data.social %}
+				<a href="{{ social.url }}" target="_blank"><i class="fa fa-{{ social.icon }}"></i></a>
+			{% endfor %}
+		</div>
+	</div>
+</header>

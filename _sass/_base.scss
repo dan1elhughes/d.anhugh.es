@@ -1,0 +1,145 @@
+@mixin transition($transition...) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+body,
+html {
+	font-family: Lato, sans-serif;
+	background-color: #f1f1eb;
+	color: #19171d
+}
+
+body {
+	color: #333
+}
+
+.wrap {
+	width: 100%;
+	max-width: 768px;
+	margin: 0 auto;
+	padding: 1em;
+	overflow: auto;
+}
+
+.wrap:after {
+	content: "";
+	display: table;
+	clear: both
+}
+
+a {
+	text-decoration: none
+}
+
+body header {
+	padding: 1em 0
+}
+
+body footer {
+	padding: 3em 0
+}
+
+h1,
+h2,
+h3 {
+	font-family: Lato, sans-serif;
+	font-weight: normal;
+	// letter-spacing: -1px
+}
+
+a img {
+	-webkit-transform: translateZ(0)
+}
+
+a {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+	color: inherit;
+	-webkit-transition: border-color 0.25s;
+	-moz-transition: border-color 0.25s;
+	-ms-transition: border-color 0.25s;
+	-o-transition: border-color 0.25s;
+	transition: border-color 0.25s
+}
+
+a:hover {
+	border-color: black
+}
+
+.fontsize-tiny { font-size: 12px; }
+.fontsize-small { font-size: 14px; }
+.fontsize-normal { font-size: 16px; }
+.fontsize-large { font-size: 21px; }
+.fontsize-xlarge { font-size: 28px; }
+.fontsize-huge { font-size: 37px; }
+.fontsize-xhuge { font-size: 50px; }
+
+li em {
+	color: grey;
+	font-style: normal;
+}
+
+.hide-lists li {
+	list-style: none;
+	padding: 0.5em 0;
+}
+
+.hide-lists ul {
+	padding: 0;
+	margin: inherit;
+}
+
+.socials a {
+	font-size: 120%;
+	border-bottom: none;
+	display: inline-block;
+
+	padding: 0.5em;
+	&:first-child { padding-left: 0; }
+
+	@include transition(opacity 0.25s);
+	&:hover { opacity: 0.5; }
+}
+
+.block {
+	width: 100%;
+	background-color: #eee
+}
+
+.block.hcontrast {
+	background-color: #212425;
+	color: #fff
+}
+
+.fullwidth {
+	width: 100%
+}
+
+footer {
+	opacity: 0.5;
+	text-align: right
+}
+
+@media (min-width:800px) {
+	header .wrap {
+		padding-top: 1em;
+		padding-bottom: 1em
+	}
+}
+
+h2 {
+	margin-top: 1em;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 0.5em
+}

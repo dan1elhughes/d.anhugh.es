@@ -1,0 +1,15 @@
+# Site settings
+title: Dan Hughes
+author: Dan Hughes
+description: Full stack developer working in Reading, UK
+url: "https://d.anhugh.es"
+
+# Development settings
+port: 8000
+
+# Build settings
+markdown: kramdown
+
+# Sass
+sass:
+  style: compressed
