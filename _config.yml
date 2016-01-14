@@ -15,3 +15,10 @@ sass:
   style: compressed
 
 permalink: /projects/:title/
+
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "project"
