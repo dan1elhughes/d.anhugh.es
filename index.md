@@ -5,9 +5,8 @@ class: hide-lists
 
 ## Recent work
 
-- [jlwbenchmark](https://jlwbenchmark.com){:target="_blank"}
-- [wrightschoolofdance](https://wrightschoolofdance.com){:target="_blank"}
-- [lewiscreative](http://lewiscreative.co.uk){:target="_blank"}
+{% for post in site.posts %}
+- [{{ post.title }}]({{ post.url }}): *{{post.description}}*{% endfor %}
 
 ## Knowledge
 
