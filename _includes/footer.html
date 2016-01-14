@@ -2,3 +2,7 @@
     <p>Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a></p>
     <p>&copy; Dan Hughes {{ site.time | date: '%Y' }}</p>
 </footer>
+{% capture js %}
+{% include _import.js %}
+{% endcapture %}
+{{ js | strip_newlines | remove: '  ' }}
