@@ -13,3 +13,5 @@ markdown: kramdown
 # Sass
 sass:
   style: compressed
+
+permalink: /projects/:title/
