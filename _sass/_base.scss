@@ -1,3 +1,9 @@
+@charset "utf-8";
+
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css";
+@import "https://fonts.googleapis.com/css?family=Lato:400,300";
+
 @mixin transition($transition...) {
 	-webkit-transition: $transition;
 	-moz-transition: $transition;
@@ -6,13 +12,27 @@
 	transition: $transition;
 }
 
+@mixin at-least($width) {
+	@media only screen and (min-width: $width) { @content; }
+}
+
 *,
 *:before,
 *:after {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box
+	box-sizing: border-box;
 }
+
+// https://github.com/chrisnager/ungrid
+// @media (min-width: 30em) {
+	.row { width: 100%; display: table; table-layout: fixed; }
+	.col { display: table-cell; }
+// }
+
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
 
 body,
 html {
@@ -27,7 +47,7 @@ body {
 
 .wrap {
 	width: 100%;
-	max-width: 768px;
+	max-width: 900px;
 	margin: 0 auto;
 	padding: 1em;
 	overflow: auto;
@@ -56,11 +76,10 @@ h2,
 h3 {
 	font-family: Lato, sans-serif;
 	font-weight: normal;
-	// letter-spacing: -1px
 }
 
 a img {
-	-webkit-transform: translateZ(0)
+	-webkit-transform: translateZ(0);
 }
 
 a {
@@ -70,20 +89,25 @@ a {
 	-moz-transition: border-color 0.25s;
 	-ms-transition: border-color 0.25s;
 	-o-transition: border-color 0.25s;
-	transition: border-color 0.25s
+	transition: border-color 0.25s;
+
+	&.img {
+		border: none;
+		@include transition(opacity 0.25s);
+
+		&:hover, &:focus {
+			opacity: 0.75;
+		}
+	}
 }
 
 a:hover {
-	border-color: black
+	border-color: black;
 }
 
-.fontsize-tiny { font-size: 12px; }
-.fontsize-small { font-size: 14px; }
-.fontsize-normal { font-size: 16px; }
-.fontsize-large { font-size: 21px; }
-.fontsize-xlarge { font-size: 28px; }
-.fontsize-huge { font-size: 37px; }
-.fontsize-xhuge { font-size: 50px; }
+h1 a {
+	border-bottom: none;
+}
 
 li em {
 	color: grey;
@@ -98,6 +122,30 @@ li em {
 .hide-lists ul {
 	padding: 0;
 	margin: inherit;
+}
+
+blockquote {
+	background-color: rgba(0, 0, 0, 0.05);
+	margin: 1em 0;
+	border-left: 3px solid lightgray;
+
+	p {
+		padding: 1em;
+	}
+}
+
+article header {
+	margin-bottom: 2em;
+
+	.sitelink {
+		text-align: right;
+	}
+}
+
+date {
+	opacity: 0.75;
+	padding: 0 3em;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .socials a {
@@ -122,7 +170,7 @@ li em {
 	color: #fff
 }
 
-.fullwidth {
+.fullwidth, article img {
 	width: 100%
 }
 
