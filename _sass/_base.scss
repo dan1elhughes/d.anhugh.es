@@ -12,19 +12,23 @@
 	transition: $transition;
 }
 
+@mixin at-least($width) {
+	@media only screen and (min-width: $width) { @content; }
+}
+
 *,
 *:before,
 *:after {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	box-sizing: border-box
+	box-sizing: border-box;
 }
 
 // https://github.com/chrisnager/ungrid
-@media (min-width: 30em) {
+// @media (min-width: 30em) {
 	.row { width: 100%; display: table; table-layout: fixed; }
 	.col { display: table-cell; }
-}
+// }
 
 .align-left { text-align: left; }
 .align-center { text-align: center; }
@@ -43,7 +47,7 @@ body {
 
 .wrap {
 	width: 100%;
-	max-width: 768px;
+	max-width: 900px;
 	margin: 0 auto;
 	padding: 1em;
 	overflow: auto;
@@ -127,7 +131,14 @@ blockquote {
 
 	p {
 		padding: 1em;
-		padding-right: 0;
+	}
+}
+
+article header {
+	margin-bottom: 2em;
+
+	.sitelink {
+		text-align: right;
 	}
 }
 

@@ -14,7 +14,6 @@ markdown: kramdown
 sass:
   style: compressed
 
-permalink: /projects/:title/
 
 defaults:
   -
@@ -22,3 +21,4 @@ defaults:
       type: "posts"
     values:
       layout: "project"
+      permalink: /projects/:title/
