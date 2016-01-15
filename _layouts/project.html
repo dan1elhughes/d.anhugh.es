@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article>
+	<header class="row">
+		<p class="col"><a href="/"><i class="fa fa-angle-left"></i> Back</a></p>
+		<p class="col sitelink"><a href="{{page.link}}" target="_blank">Launch project</a></p>
+	</header>
+	<a class="img" href="{{ page.link }}" target="_blank">
+		<img src="{{page.image | prepend: site.cdn}}" alt="" />
+	</a>
+	{{content}}
+	<p class="align-center"><date>{{ page.date | date: '%d %B, %Y'}}</date></p>
+</article>
