@@ -64,8 +64,22 @@ a {
 }
 
 body header {
-	padding: 1em 0
+	padding: 1em 0;
+	position: relative;
+
+	canvas {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+	}
+
+	div {
+		position: relative;
+	}
 }
+
 
 body footer {
 	padding: 3em 0
