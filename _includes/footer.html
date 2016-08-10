@@ -5,4 +5,6 @@
 {% capture js %}
 {% include _import.js %}
 {% endcapture %}
-{{ js | strip_newlines }}
+<script type="text/javascript">
+	{{ js | strip_newlines | replace: '	', '' }}
+</script>
