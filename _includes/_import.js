@@ -17,7 +17,7 @@ update();
 function setup() {
 
 	width = window.innerWidth;
-	height = window.innerHeight;
+	height = document.querySelector('header').clientHeight;
 
 	lines.length = 0;
 
@@ -60,7 +60,7 @@ function update() {
 
 	context.clearRect(0, 0, width, height);
 
-	context.lineWidth = 10;
+	context.lineWidth = 3;
 	context.strokeStyle = '#333';
 	context.fillStyle = '#212425';
 
