@@ -17,10 +17,10 @@ class: hide-lists
 - *Development tools:* Grunt tasks / Composer packages  / Yeoman generators
 - *Project management:* Contracts / Client meetings / Time management
 
-## Education
+## History
 
-- *2015 - Current:* HeathWallace (Placement JavaScript developer)
-- *2013 - 2015:* University of Reading (Computer Science)
+- *2013 - Present:* University of Reading (Computer Science)
+- *2015 - 2016:* HeathWallace (Placement JavaScript developer)
 - *2011 - 2013:* Highdown Sixth Form Centre (Computing)
 
 ## Elsewhere
