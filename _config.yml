@@ -5,7 +5,7 @@ description: Full stack developer working in Reading, UK
 url: "https://d.anhugh.es"
 cdn: "https://s3-eu-west-1.amazonaws.com/img.d.anhugh.es"
 # Development settings
-port: 8000
+port: 8080
 
 # Build settings
 markdown: kramdown
