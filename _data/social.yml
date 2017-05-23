@@ -10,9 +10,9 @@
   url: "https://www.linkedin.com/in/dan1elhughes"
   icon: "linkedin"
 
-- name: "btc"
-  url: "https://blockchain.info/address/19LG2jagtJJWZiEWoZmk8ZSRq1AtVVYUhZ?currency=GBP"
-  icon: "btc"
+- name: "twitter"
+  url: "https://www.twitter.com/dan1elhughes"
+  icon: "twitter"
 
 - name: "pgp"
   url: "https://pgp.mit.edu/pks/lookup?op=get&search=0x598A72A696915FFD"
