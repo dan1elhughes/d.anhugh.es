@@ -6,7 +6,7 @@ class: hide-lists
 ## Recent work
 
 {% for post in site.posts %}
-- [{{ post.title }}]({{ post.url }}): *{{post.description}}*{% endfor %}
+- [{{ post.title }}]({{ post.redirect | default: post.url }}): *{{post.description}}*{% endfor %}
 
 ## Knowledge
 
